@@ -4,9 +4,9 @@ public class Palindrome
 {
     private string stringToTest;
     bool isPalindrome;
-    private bool IsPalindrome(string input)
+    private bool IsPalindrome(string userInputString)
     {
-        stringToTest = input.Replace(" ", "");
+        stringToTest = userInputString.Replace(" ", "");
         isPalindrome = true;
         
         for (int i = 0; i < stringToTest.Length / 2; i++)
@@ -16,18 +16,14 @@ public class Palindrome
                 isPalindrome = false;
                 break;
             }
-            else
-            {
-                isPalindrome = true;
-            }
-        }
+        } 
         return isPalindrome;
     }
 
     public void PrintResult()
     {
         Console.WriteLine("Please enter a word or phrase to test if it is a palindrome: ");
-        stringToTest = Console.ReadLine().ToLower().Trim(' ');
+        stringToTest = Console.ReadLine().ToLower();
         Console.WriteLine(IsPalindrome(stringToTest));
     }
 }
