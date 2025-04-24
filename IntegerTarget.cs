@@ -4,7 +4,6 @@ public class IntegerTarget
 {
     public void SearchForTarget(int[] array, int target)
     {
-        
         for (int i = 0; i < array.Length; i++)
         {
             for (int j = i + 1; j < array.Length; j++)
@@ -18,6 +17,10 @@ public class IntegerTarget
                                        and the number {array[j]} which is at position {j}.
                                        """);
                     break;
+                }
+                else
+                {
+                    Console.WriteLine("The target number cannot be reached.");
                 }
             }
         }
